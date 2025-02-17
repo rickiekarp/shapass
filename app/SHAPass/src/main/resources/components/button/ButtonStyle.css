@@ -1,0 +1,49 @@
+/*
+*	settings button
+*/
+.decoration-button-settings {
+    -fx-border-style: null;
+    -fx-border-color: null;
+    -fx-border-width: 0;
+    -fx-background-color: null;
+    -fx-background-image:url("./settings-icon.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-size: 39 35;
+    -fx-padding: 7 20 4 20;
+}
+.decoration-button-settings:hover {
+    -fx-background-image:url("./settings-icon_hover.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-size: 39 35;
+    -fx-padding: 7 20 4 20;
+}
+
+.decoration-button-settings:focused {
+    -fx-border-style: null;
+    -fx-border-color: null;
+}
+
+/*
+*	about button
+*/
+.decoration-button-about{
+    -fx-border-style: null;
+    -fx-border-color: null;
+    -fx-border-width: 0;
+    -fx-background-color: null;
+    -fx-background-image:url("./info-icon.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-size: 39 35;
+    -fx-padding: 7 20 4 20;
+}
+.decoration-button-about:hover {
+    -fx-background-image:url("./info-icon_hover.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-size: 39 35;
+    -fx-padding: 7 20 4 20;
+}
+
+.decoration-button-about:focused {
+    -fx-border-style: null;
+    -fx-border-color: null;
+}

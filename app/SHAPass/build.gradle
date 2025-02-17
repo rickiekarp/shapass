@@ -1,0 +1,56 @@
+import java.text.SimpleDateFormat
+
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin'
+}
+
+dependencies {
+    api "com.squareup.okhttp3:okhttp:4.12.0"
+    implementation "org.json:json:20240303"
+    implementation "commons-io:commons-io:2.15.1"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.17.0"
+    implementation group: 'net.java.dev.jna', name: 'jna', version: '5.15.0'
+}
+
+application.mainClass.set("net.rickiekarp.shapass.Main")
+
+jar {
+    println("Building " + project.name)
+
+    def minorVersion = 0
+    def publicVersion = 0
+
+    if (minorVersion > 0) {
+        publicVersion = new SimpleDateFormat("yy.MM.dd").format(new Date()) + '.' + minorVersion
+    } else {
+        publicVersion = new SimpleDateFormat("yy.MM.dd").format(new Date())
+    }
+
+    manifest {
+        attributes(
+                'Class-Path': configurations.runtimeClasspath.collect { it.getName() }.join(' '),
+                'Main-Class': application.mainClass.get(),
+                'Build-Time': new SimpleDateFormat("yyMMddHHmm").format(new Date()),
+                'Version': publicVersion
+        )
+    }
+}
+
+tasks.register('fetchNativesLib', Exec) {
+    workingDir "."
+    group "build"
+    commandLine "rsync", "-rlvpt", "--mkpath", "pi:/mnt/raid2/applications/nginx/files/packages/libsha1pass/*", "src/main/resources/libs/natives"
+    doLast {
+        println "DONE!"
+    }
+}
+
+tasks.register('deployArchive', Exec) {
+    workingDir "./build/distributions/"
+    group "distribution"
+    commandLine "rsync", "-rlvpt", "SHA1Pass.zip", "pi:/mnt/raid2/applications/nginx/files/software/dev/sha1pass/"
+    doLast {
+        println "DONE!"
+    }
+}
