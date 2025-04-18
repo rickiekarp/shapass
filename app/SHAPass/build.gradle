@@ -49,7 +49,7 @@ tasks.register('fetchNativesLib', Exec) {
 tasks.register('deployArchive', Exec) {
     workingDir "./build/distributions/"
     group "distribution"
-    commandLine "rsync", "-rlvpt", "SHA1Pass.zip", "pi:/mnt/raid2/applications/nginx/files/software/dev/sha1pass/"
+    commandLine "rsync", "-rlvpt", "SHAPass.zip", "pi:/mnt/raid2/applications/nginx/files/software/dev/shapass/"
     doLast {
         println "DONE!"
     }
