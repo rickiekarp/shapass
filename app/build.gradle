@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 buildscript {
     repositories {
         mavenCentral()
@@ -14,6 +16,7 @@ buildscript {
 allprojects {
     apply plugin:'java'
     apply plugin:'kotlin'
+    apply plugin:'application'
 
     apply plugin: "org.openjfx.javafxplugin"
     javafx {
@@ -30,9 +33,34 @@ allprojects {
         targetCompatibility = JavaVersion.VERSION_21
     }
 
+    application.mainClass.set("net.rickiekarp.shapass.Main")
+
     dependencies {
+        api "com.squareup.okhttp3:okhttp:4.12.0"
+        implementation "org.json:json:20240303"
+        implementation "commons-io:commons-io:2.15.1"
+        implementation "com.fasterxml.jackson.core:jackson-databind:2.17.0"
+        implementation group: 'net.java.dev.jna', name: 'jna', version: '5.15.0'
         testImplementation "org.junit.jupiter:junit-jupiter-api:5.10.2"
         testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.10.2"
+    }
+
+    tasks.register('fetchNativesLib', Exec) {
+        workingDir "."
+        group "build"
+        commandLine "rsync", "-rlvpt", "--mkpath", "pi:/mnt/raid2/applications/nginx/files/packages/libsha1pass/*", "src/main/resources/libs/natives"
+        doLast {
+            println "DONE!"
+        }
+    }
+
+    tasks.register('deployArchive', Exec) {
+        workingDir "./build/distributions/"
+        group "distribution"
+        commandLine "rsync", "-rlvpt", "shapass.zip", "pi:/mnt/raid2/applications/nginx/files/software/dev/shapass/"
+        doLast {
+            println "DONE!"
+        }
     }
 
     test {
@@ -40,6 +68,28 @@ allprojects {
         testLogging {
             // Make sure output from standard out or error is shown in Gradle output
             showStandardStreams = true
+        }
+    }
+
+    jar {
+        println("Building " + project.name)
+
+        def minorVersion = 0
+        def publicVersion = 0
+
+        if (minorVersion > 0) {
+            publicVersion = new SimpleDateFormat("yy.MM.dd").format(new Date()) + '.' + minorVersion
+        } else {
+            publicVersion = new SimpleDateFormat("yy.MM.dd").format(new Date())
+        }
+
+        manifest {
+            attributes(
+                    'Class-Path': configurations.runtimeClasspath.collect { it.getName() }.join(' '),
+                    'Main-Class': application.mainClass.get(),
+                    'Build-Time': new SimpleDateFormat("yyMMddHHmm").format(new Date()),
+                    'Version': publicVersion
+            )
         }
     }
 }

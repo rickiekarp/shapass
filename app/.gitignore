@@ -3,4 +3,4 @@
 .kotlin
 
 build
-SHAPass/src/main/resources/libs/natives
+src/main/resources/libs/natives

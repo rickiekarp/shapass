@@ -1,3 +1,1 @@
-rootProject.name = "JavaFXApps"
-
-include("SHAPass")
+rootProject.name = "shapass"
