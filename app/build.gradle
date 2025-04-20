@@ -45,23 +45,14 @@ allprojects {
         testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.10.2"
     }
 
-    tasks.register('fetchNativesLib', Exec) {
-        workingDir "."
-        group "build"
-        commandLine "rsync", "-rlvpt", "--mkpath", "pi:/mnt/raid2/applications/nginx/files/packages/libsha1pass/*", "src/main/resources/libs/natives"
-        doLast {
-            println "DONE!"
-        }
-    }
-
-    tasks.register('deployArchive', Exec) {
-        workingDir "./build/distributions/"
-        group "distribution"
-        commandLine "rsync", "-rlvpt", "shapass.zip", "pi:/mnt/raid2/applications/nginx/files/software/dev/shapass/"
-        doLast {
-            println "DONE!"
-        }
-    }
+//    tasks.register('fetchNativesLib', Exec) {
+//        workingDir "."
+//        group "build"
+//        commandLine "rsync", "-rlvpt", "--mkpath", "pi:/mnt/raid2/applications/nginx/files/packages/libsha1pass/*", "src/main/resources/libs/natives"
+//        doLast {
+//            println "DONE!"
+//        }
+//    }
 
     test {
         useJUnitPlatform()
@@ -95,5 +86,5 @@ allprojects {
 }
 
 wrapper {
-    gradleVersion = "8.5"
+    gradleVersion = "8.13"
 }
