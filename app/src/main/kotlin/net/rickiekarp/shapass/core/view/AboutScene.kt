@@ -1,4 +1,4 @@
-package net.rickiekarp.core.view
+package net.rickiekarp.shapass.core.view
 
 import javafx.geometry.HPos
 import javafx.geometry.Insets
@@ -13,14 +13,14 @@ import javafx.scene.layout.GridPane
 import javafx.scene.layout.HBox
 import javafx.scene.layout.Priority
 import javafx.stage.Stage
-import net.rickiekarp.core.AppContext
-import net.rickiekarp.core.debug.DebugHelper
-import net.rickiekarp.core.debug.ExceptionHandler
-import net.rickiekarp.core.provider.LocalizationProvider
-import net.rickiekarp.core.ui.windowmanager.ImageLoader
-import net.rickiekarp.core.ui.windowmanager.WindowScene
-import net.rickiekarp.core.ui.windowmanager.WindowStage
-import net.rickiekarp.core.util.CommonUtil
+import net.rickiekarp.shapass.core.AppContext
+import net.rickiekarp.shapass.core.debug.DebugHelper
+import net.rickiekarp.shapass.core.debug.ExceptionHandler
+import net.rickiekarp.shapass.core.provider.LocalizationProvider
+import net.rickiekarp.shapass.core.ui.windowmanager.ImageLoader
+import net.rickiekarp.shapass.core.ui.windowmanager.WindowScene
+import net.rickiekarp.shapass.core.ui.windowmanager.WindowStage
+import net.rickiekarp.shapass.core.util.CommonUtil
 import java.io.IOException
 import java.net.URISyntaxException
 

@@ -1,4 +1,4 @@
-package net.rickiekarp.core.ui.windowmanager
+package net.rickiekarp.shapass.core.ui.windowmanager
 
 import javafx.application.Platform
 import javafx.geometry.BoundingBox
@@ -9,8 +9,8 @@ import javafx.scene.input.MouseEvent
 import javafx.stage.Screen
 import javafx.stage.Stage
 import javafx.stage.WindowEvent
-import net.rickiekarp.core.debug.LogFileHandler
-import net.rickiekarp.core.view.MainScene
+import net.rickiekarp.shapass.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.view.MainScene
 
 class WindowController internal constructor(private val window: Window) {
     private val DOCK_NONE = 0x0

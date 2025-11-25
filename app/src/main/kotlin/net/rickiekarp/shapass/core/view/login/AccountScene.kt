@@ -1,4 +1,4 @@
-package net.rickiekarp.core.view.login
+package net.rickiekarp.shapass.core.view.login
 
 import javafx.geometry.Insets
 import javafx.geometry.Pos
@@ -10,12 +10,12 @@ import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.stage.Modality
 import javafx.stage.Stage
-import net.rickiekarp.core.provider.LocalizationProvider
-import net.rickiekarp.core.ui.windowmanager.ImageLoader
-import net.rickiekarp.core.ui.windowmanager.ThemeSelector
-import net.rickiekarp.core.ui.windowmanager.WindowScene
-import net.rickiekarp.core.ui.windowmanager.WindowStage
-import net.rickiekarp.core.view.MainScene
+import net.rickiekarp.shapass.core.provider.LocalizationProvider
+import net.rickiekarp.shapass.core.ui.windowmanager.ImageLoader
+import net.rickiekarp.shapass.core.ui.windowmanager.ThemeSelector
+import net.rickiekarp.shapass.core.ui.windowmanager.WindowScene
+import net.rickiekarp.shapass.core.ui.windowmanager.WindowStage
+import net.rickiekarp.shapass.core.view.MainScene
 
 /**
  * This class is used for creating different message dialogs.

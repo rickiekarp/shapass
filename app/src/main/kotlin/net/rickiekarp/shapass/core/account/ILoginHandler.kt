@@ -1,6 +1,6 @@
-package net.rickiekarp.core.account
+package net.rickiekarp.shapass.core.account
 
-import net.rickiekarp.core.view.layout.LoginMaskLayout
+import net.rickiekarp.shapass.core.view.layout.LoginMaskLayout
 
 interface ILoginHandler {
     fun setAppContextLoginBehaviour(loginMaskLayout: LoginMaskLayout)

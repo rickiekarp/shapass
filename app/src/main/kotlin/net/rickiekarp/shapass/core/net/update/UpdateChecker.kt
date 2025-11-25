@@ -1,16 +1,16 @@
-package net.rickiekarp.core.net.update
+package net.rickiekarp.shapass.core.net.update
 
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
 import javafx.application.Platform
-import net.rickiekarp.core.AppContext
-import net.rickiekarp.core.debug.DebugHelper
-import net.rickiekarp.core.debug.ExceptionHandler
-import net.rickiekarp.core.debug.LogFileHandler
-import net.rickiekarp.core.model.dto.ApplicationDTO
-import net.rickiekarp.core.net.NetworkApi
-import net.rickiekarp.core.settings.Configuration
-import net.rickiekarp.core.util.FileUtil
+import net.rickiekarp.shapass.core.AppContext
+import net.rickiekarp.shapass.core.debug.DebugHelper
+import net.rickiekarp.shapass.core.debug.ExceptionHandler
+import net.rickiekarp.shapass.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.model.dto.ApplicationDTO
+import net.rickiekarp.shapass.core.net.NetworkApi
+import net.rickiekarp.shapass.core.settings.Configuration
+import net.rickiekarp.shapass.core.util.FileUtil
 import java.io.File
 import java.io.IOException
 import java.net.URI

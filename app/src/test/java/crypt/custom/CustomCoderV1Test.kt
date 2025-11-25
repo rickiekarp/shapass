@@ -3,7 +3,7 @@ package crypt.custom
 import net.rickiekarp.core.enums.AlphabetType
 import net.rickiekarp.core.enums.CustomCoderType
 import net.rickiekarp.core.model.CustomCoderConfig
-import net.rickiekarp.core.util.crypt.custom.CustomCoderV1
+import net.rickiekarp.shapass.core.util.crypt.custom.CustomCoderV1
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 

@@ -1,6 +1,6 @@
-package net.rickiekarp.core.ui.windowmanager
+package net.rickiekarp.shapass.core.ui.windowmanager
 
-import net.rickiekarp.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.debug.LogFileHandler
 import java.util.*
 
 class WindowStageStack : Stack<WindowStage>() {

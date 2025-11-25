@@ -1,6 +1,6 @@
-package net.rickiekarp.core.account
+package net.rickiekarp.shapass.core.account
 
-import net.rickiekarp.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.debug.LogFileHandler
 
 class Account(var user: String?, var password: String?) {
     var accessToken: String? = null

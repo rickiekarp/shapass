@@ -1,8 +1,8 @@
-package net.rickiekarp.core.settings
+package net.rickiekarp.shapass.core.settings
 
 import javafx.geometry.Side
 import javafx.scene.paint.Color
-import net.rickiekarp.core.provider.LocalizationProvider
+import net.rickiekarp.shapass.core.provider.LocalizationProvider
 
 /** Annotation for indicating load/save a field.  */
 @Retention(AnnotationRetention.RUNTIME)

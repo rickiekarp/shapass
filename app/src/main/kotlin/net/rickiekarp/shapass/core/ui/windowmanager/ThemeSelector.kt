@@ -1,9 +1,9 @@
-package net.rickiekarp.core.ui.windowmanager
+package net.rickiekarp.shapass.core.ui.windowmanager
 
 import javafx.scene.Scene
 import javafx.scene.paint.Color
-import net.rickiekarp.core.settings.Configuration
-import net.rickiekarp.core.view.MainScene
+import net.rickiekarp.shapass.core.settings.Configuration
+import net.rickiekarp.shapass.core.view.MainScene
 
 object ThemeSelector {
 

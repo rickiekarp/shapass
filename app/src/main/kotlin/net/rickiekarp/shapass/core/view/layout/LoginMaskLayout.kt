@@ -1,4 +1,4 @@
-package net.rickiekarp.core.view.layout
+package net.rickiekarp.shapass.core.view.layout
 
 import javafx.application.Platform
 import javafx.concurrent.Task
@@ -7,12 +7,12 @@ import javafx.scene.Node
 import javafx.scene.control.*
 import javafx.scene.layout.GridPane
 import javafx.scene.layout.VBox
-import net.rickiekarp.core.AppContext
-import net.rickiekarp.core.account.Account
-import net.rickiekarp.core.account.ILoginHandler
-import net.rickiekarp.core.view.MainScene
-import net.rickiekarp.core.view.MessageDialog
-import net.rickiekarp.core.view.login.AccountScene
+import net.rickiekarp.shapass.core.AppContext
+import net.rickiekarp.shapass.core.account.Account
+import net.rickiekarp.shapass.core.account.ILoginHandler
+import net.rickiekarp.shapass.core.view.MainScene
+import net.rickiekarp.shapass.core.view.MessageDialog
+import net.rickiekarp.shapass.core.view.login.AccountScene
 
 /**
  * Main Login Mask layout class.

@@ -1,4 +1,4 @@
-package net.rickiekarp.core.view.layout
+package net.rickiekarp.shapass.core.view.layout
 
 import javafx.scene.Node
 

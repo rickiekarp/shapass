@@ -1,11 +1,12 @@
-package net.rickiekarp.core.util.crypt.custom
+package net.rickiekarp.shapass.core.util.crypt.custom
 
-import net.rickiekarp.core.extensions.addCharAtIndex
-import net.rickiekarp.core.extensions.removeCharAtIndex
-import net.rickiekarp.core.model.CustomCoderConfig
-import net.rickiekarp.core.util.crypt.Md5Coder
-import net.rickiekarp.core.util.math.MathUtil
-import net.rickiekarp.core.util.random.RandomCharacter
+import net.rickiekarp.shapass.core.extensions.addCharAtIndex
+import net.rickiekarp.shapass.core.extensions.removeCharAtIndex
+import net.rickiekarp.shapass.core.model.CustomCoderConfig
+import net.rickiekarp.shapass.core.util.crypt.Md5Coder
+import net.rickiekarp.shapass.core.util.math.MathUtil
+import net.rickiekarp.shapass.core.util.random.RandomCharacter
+import kotlin.text.iterator
 
 object CustomCoderV1 {
 

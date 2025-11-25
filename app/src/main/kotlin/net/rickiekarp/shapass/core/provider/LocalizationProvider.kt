@@ -1,7 +1,7 @@
-package net.rickiekarp.core.provider
+package net.rickiekarp.shapass.core.provider
 
-import net.rickiekarp.core.debug.LogFileHandler
-import net.rickiekarp.core.settings.Configuration
+import net.rickiekarp.shapass.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.settings.Configuration
 import java.io.IOException
 import java.io.InputStream
 import java.util.*

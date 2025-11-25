@@ -1,7 +1,7 @@
-package net.rickiekarp.core.enums
+package net.rickiekarp.shapass.core.enums
 
-import net.rickiekarp.core.math.noise.NoiseConfig
-import net.rickiekarp.core.math.noise.NoiseInput
+import net.rickiekarp.shapass.core.math.noise.NoiseConfig
+import net.rickiekarp.shapass.core.math.noise.NoiseInput
 
 enum class CustomCoderType(private val seed: Long, private val noiseConfig: NoiseConfig) {
     V1(

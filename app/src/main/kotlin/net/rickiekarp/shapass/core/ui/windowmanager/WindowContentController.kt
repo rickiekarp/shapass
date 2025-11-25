@@ -1,8 +1,8 @@
-package net.rickiekarp.core.ui.windowmanager
+package net.rickiekarp.shapass.core.ui.windowmanager
 
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
-import net.rickiekarp.core.components.button.SidebarButton
+import net.rickiekarp.shapass.core.components.button.SidebarButton
 
 class WindowContentController internal constructor() {
     private val sidebarNodes: MutableList<SidebarButton>

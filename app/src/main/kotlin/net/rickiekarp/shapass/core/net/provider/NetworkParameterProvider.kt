@@ -1,6 +1,6 @@
-package net.rickiekarp.core.net.provider
+package net.rickiekarp.shapass.core.net.provider
 
-import net.rickiekarp.core.net.NetworkAction
+import net.rickiekarp.shapass.core.net.NetworkAction
 import java.util.*
 
 class NetworkParameterProvider private constructor() : NetworkAction.IParameterProvider {

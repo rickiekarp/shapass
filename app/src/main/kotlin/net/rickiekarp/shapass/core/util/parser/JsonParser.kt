@@ -1,6 +1,6 @@
-package net.rickiekarp.core.util.parser
+package net.rickiekarp.shapass.core.util.parser
 
-import net.rickiekarp.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.debug.LogFileHandler
 import org.apache.commons.io.IOUtils
 import org.json.JSONObject
 import java.io.File

@@ -1,4 +1,4 @@
-package net.rickiekarp.core.net
+package net.rickiekarp.shapass.core.net
 
 import okhttp3.Response
 import org.json.JSONException

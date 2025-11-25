@@ -1,13 +1,13 @@
-package net.rickiekarp.core.account
+package net.rickiekarp.shapass.core.account
 
-import net.rickiekarp.core.AppContext
-import net.rickiekarp.core.debug.LogFileHandler
-import net.rickiekarp.core.net.NetResponse
-import net.rickiekarp.core.net.NetworkApi
-import net.rickiekarp.core.settings.Configuration
-import net.rickiekarp.core.util.FileUtil
-import net.rickiekarp.core.util.crypt.Base64Coder
-import net.rickiekarp.core.util.parser.JsonParser
+import net.rickiekarp.shapass.core.AppContext
+import net.rickiekarp.shapass.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.net.NetResponse
+import net.rickiekarp.shapass.core.net.NetworkApi
+import net.rickiekarp.shapass.core.settings.Configuration
+import net.rickiekarp.shapass.core.util.FileUtil
+import net.rickiekarp.shapass.core.util.crypt.Base64Coder
+import net.rickiekarp.shapass.core.util.parser.JsonParser
 import org.json.JSONException
 import org.json.JSONObject
 

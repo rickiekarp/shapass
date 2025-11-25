@@ -11,24 +11,24 @@ import javafx.scene.image.Image
 import javafx.scene.image.ImageView
 import javafx.scene.layout.*
 import javafx.stage.Stage
-import net.rickiekarp.core.components.FoldableListCell
-import net.rickiekarp.core.components.textfield.CustomTextField
-import net.rickiekarp.core.debug.DebugHelper
-import net.rickiekarp.core.debug.LogFileHandler
-import net.rickiekarp.core.enums.AlphabetType
-import net.rickiekarp.core.enums.CustomCoderType
-import net.rickiekarp.core.enums.FontType
-import net.rickiekarp.core.model.CustomCoderConfig
-import net.rickiekarp.core.model.SettingEntry
-import net.rickiekarp.core.provider.LocalizationProvider
-import net.rickiekarp.core.ui.windowmanager.ImageLoader
-import net.rickiekarp.core.ui.windowmanager.WindowScene
-import net.rickiekarp.core.ui.windowmanager.WindowStage
-import net.rickiekarp.core.util.crypt.CustomCoder
-import net.rickiekarp.core.util.image.TextToImage
-import net.rickiekarp.core.view.MainScene
-import net.rickiekarp.shapass.math.PerlinNoise2D
+import net.rickiekarp.shapass.core.util.crypt.CustomCoder
+import net.rickiekarp.shapass.core.util.image.TextToImage
+import net.rickiekarp.shapass.core.components.FoldableListCell
+import net.rickiekarp.shapass.core.components.textfield.CustomTextField
+import net.rickiekarp.shapass.core.debug.DebugHelper
+import net.rickiekarp.shapass.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.enums.AlphabetType
+import net.rickiekarp.shapass.core.enums.CustomCoderType
+import net.rickiekarp.shapass.core.enums.FontType
+import net.rickiekarp.shapass.core.model.CustomCoderConfig
+import net.rickiekarp.shapass.core.model.SettingEntry
+import net.rickiekarp.shapass.core.provider.LocalizationProvider
+import net.rickiekarp.shapass.core.ui.windowmanager.ImageLoader
+import net.rickiekarp.shapass.core.ui.windowmanager.WindowScene
+import net.rickiekarp.shapass.core.ui.windowmanager.WindowStage
+import net.rickiekarp.shapass.core.view.MainScene
 import net.rickiekarp.shapass.enum.TextCodingType
+import net.rickiekarp.shapass.math.PerlinNoise2D
 import java.util.*
 
 class TextCoding(textCodingType: TextCodingType) {
@@ -126,7 +126,6 @@ class TextCoding(textCodingType: TextCodingType) {
 
             seedTextField = TextField()
             seedTextField.style = "-fx-font-size: 10pt;"
-            seedTextField.tooltip = Tooltip(LocalizationProvider.getString("pass_peek_tip"))
             seedTextField.promptText = LocalizationProvider.getString("seed")
             GridPane.setConstraints(seedTextField, 0, 1)
             GridPane.setColumnSpan(seedTextField, 2)

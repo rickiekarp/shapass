@@ -1,4 +1,4 @@
-package net.rickiekarp.core.view
+package net.rickiekarp.shapass.core.view
 
 import javafx.geometry.Insets
 import javafx.geometry.Pos
@@ -8,15 +8,15 @@ import javafx.scene.control.Label
 import javafx.scene.layout.*
 import javafx.stage.Modality
 import javafx.stage.Stage
-import net.rickiekarp.core.debug.DebugHelper
-import net.rickiekarp.core.debug.ExceptionHandler
-import net.rickiekarp.core.debug.LogFileHandler
-import net.rickiekarp.core.net.update.UpdateChecker
-import net.rickiekarp.core.provider.LocalizationProvider
-import net.rickiekarp.core.settings.Configuration
-import net.rickiekarp.core.ui.windowmanager.ImageLoader
-import net.rickiekarp.core.ui.windowmanager.WindowScene
-import net.rickiekarp.core.ui.windowmanager.WindowStage
+import net.rickiekarp.shapass.core.debug.DebugHelper
+import net.rickiekarp.shapass.core.debug.ExceptionHandler
+import net.rickiekarp.shapass.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.net.update.UpdateChecker
+import net.rickiekarp.shapass.core.provider.LocalizationProvider
+import net.rickiekarp.shapass.core.settings.Configuration
+import net.rickiekarp.shapass.core.ui.windowmanager.ImageLoader
+import net.rickiekarp.shapass.core.ui.windowmanager.WindowScene
+import net.rickiekarp.shapass.core.ui.windowmanager.WindowStage
 import java.io.IOException
 import java.net.URISyntaxException
 

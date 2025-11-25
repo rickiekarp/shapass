@@ -1,4 +1,4 @@
-package net.rickiekarp.core.debug
+package net.rickiekarp.shapass.core.debug
 
 import javafx.geometry.Insets
 import javafx.geometry.Pos
@@ -10,9 +10,9 @@ import javafx.scene.layout.*
 import javafx.scene.paint.Color
 import javafx.stage.Modality
 import javafx.stage.Stage
-import net.rickiekarp.core.provider.LocalizationProvider
-import net.rickiekarp.core.ui.windowmanager.ThemeSelector
-import net.rickiekarp.core.util.ClipboardUtil
+import net.rickiekarp.shapass.core.provider.LocalizationProvider
+import net.rickiekarp.shapass.core.ui.windowmanager.ThemeSelector
+import net.rickiekarp.shapass.core.util.ClipboardUtil
 import java.util.logging.Level
 
 /**

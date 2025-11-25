@@ -1,4 +1,4 @@
-package net.rickiekarp.core.model
+package net.rickiekarp.shapass.core.model
 
 import javafx.beans.property.SimpleStringProperty
 

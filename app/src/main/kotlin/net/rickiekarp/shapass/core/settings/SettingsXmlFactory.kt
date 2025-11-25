@@ -1,9 +1,9 @@
-package net.rickiekarp.core.settings
+package net.rickiekarp.shapass.core.settings
 
 import javafx.scene.paint.Color
-import net.rickiekarp.core.debug.DebugHelper
-import net.rickiekarp.core.debug.ExceptionHandler
-import net.rickiekarp.core.ui.windowmanager.ThemeSelector
+import net.rickiekarp.shapass.core.debug.DebugHelper
+import net.rickiekarp.shapass.core.debug.ExceptionHandler
+import net.rickiekarp.shapass.core.ui.windowmanager.ThemeSelector
 import org.w3c.dom.Document
 import org.w3c.dom.NodeList
 import org.xml.sax.SAXException

@@ -1,4 +1,4 @@
-package net.rickiekarp.core.controller
+package net.rickiekarp.shapass.core.controller
 
 interface IAppLauncher {
     fun postLaunch()

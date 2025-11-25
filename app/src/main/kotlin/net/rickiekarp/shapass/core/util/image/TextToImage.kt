@@ -1,4 +1,4 @@
-package net.rickiekarp.core.util.image
+package net.rickiekarp.shapass.core.util.image
 
 import javafx.embed.swing.SwingFXUtils
 import javafx.geometry.Insets
@@ -9,7 +9,7 @@ import javafx.scene.control.Label
 import javafx.scene.image.Image
 import javafx.scene.image.WritableImage
 import javafx.scene.text.Font
-import net.rickiekarp.core.enums.FontType
+import net.rickiekarp.shapass.core.enums.FontType
 import java.io.File
 import java.io.IOException
 import javax.imageio.ImageIO

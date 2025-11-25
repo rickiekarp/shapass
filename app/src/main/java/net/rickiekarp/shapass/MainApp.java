@@ -1,7 +1,7 @@
 package net.rickiekarp.shapass;
 
 import javafx.stage.Stage;
-import net.rickiekarp.core.AppStarter;
+import net.rickiekarp.shapass.core.AppStarter;
 import net.rickiekarp.shapass.view.MainLayout;
 import org.jetbrains.annotations.NotNull;
 
@@ -22,7 +22,7 @@ public class MainApp extends AppStarter {
         setWinType((byte) 1);
         setMinWidth(440);
         setMinHeight(145);
-        setWidth(475);
+        setWidth(450);
         setHeight(205);
         setLayout(new MainLayout());
 

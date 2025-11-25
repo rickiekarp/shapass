@@ -1,7 +1,7 @@
-package net.rickiekarp.core.util
+package net.rickiekarp.shapass.core.util
 
-import net.rickiekarp.core.debug.DebugHelper
-import net.rickiekarp.core.debug.ExceptionHandler
+import net.rickiekarp.shapass.core.debug.DebugHelper
+import net.rickiekarp.shapass.core.debug.ExceptionHandler
 import java.io.*
 import java.nio.file.Files
 import java.nio.file.Path

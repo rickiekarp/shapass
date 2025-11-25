@@ -1,4 +1,4 @@
-package net.rickiekarp.core.util
+package net.rickiekarp.shapass.core.util
 
 import java.util.*
 

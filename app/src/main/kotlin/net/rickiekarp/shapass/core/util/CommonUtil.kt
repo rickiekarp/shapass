@@ -1,4 +1,4 @@
-package net.rickiekarp.core.util
+package net.rickiekarp.shapass.core.util
 
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -34,7 +34,7 @@ object CommonUtil {
      * @param min Minimum value
      * @param max Maximum value.  Must be greater than min.
      * @return Integer between min and max, inclusive.
-     * @see java.util.Random.nextInt
+     * @see Random.nextInt
      */
     fun randInt(min: Int, max: Int): Int {
         val rand = Random()

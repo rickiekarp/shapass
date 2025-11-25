@@ -1,4 +1,4 @@
-package net.rickiekarp.core.ui.anim
+package net.rickiekarp.shapass.core.ui.anim
 
 import javafx.animation.*
 import javafx.beans.property.DoubleProperty
@@ -7,7 +7,7 @@ import javafx.scene.Node
 import javafx.scene.control.Label
 import javafx.scene.image.ImageView
 import javafx.util.Duration
-import net.rickiekarp.core.settings.Configuration
+import net.rickiekarp.shapass.core.settings.Configuration
 
 /**
  *
@@ -45,10 +45,10 @@ object AnimationHandler {
      */
     fun createMenuBtnAnim(imageView: ImageView, HEIGHT: Int) {
         menuBtnAnim = SpriteAnimation(
-                imageView, Duration.millis(1000.0),
-                42, 7,
-                OFFSET_X, OFFSET_Y,
-                WIDTH, HEIGHT
+            imageView, Duration.millis(1000.0),
+            42, 7,
+            OFFSET_X, OFFSET_Y,
+            WIDTH, HEIGHT
         )
         menuBtnAnim.cycleCount = 1
     }

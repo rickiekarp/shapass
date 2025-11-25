@@ -1,13 +1,14 @@
-package net.rickiekarp.core.net
+package net.rickiekarp.shapass.core.net
 
-import net.rickiekarp.core.AppContext
-import net.rickiekarp.core.debug.LogFileHandler
-import net.rickiekarp.core.settings.Configuration
-import okhttp3.*
+import net.rickiekarp.shapass.core.AppContext
+import net.rickiekarp.shapass.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.settings.Configuration
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.OkHttpClient
+import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
+import okhttp3.Response
 import org.json.JSONObject
-
 import java.io.IOException
 import java.io.InputStream
 import java.io.UnsupportedEncodingException

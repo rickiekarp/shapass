@@ -1,8 +1,8 @@
-package net.rickiekarp.core.net
+package net.rickiekarp.shapass.core.net
 
-import net.rickiekarp.core.AppContext
-import net.rickiekarp.core.account.Account
-import net.rickiekarp.core.net.provider.NetworkParameterProvider
+import net.rickiekarp.shapass.core.AppContext
+import net.rickiekarp.shapass.core.account.Account
+import net.rickiekarp.shapass.core.net.provider.NetworkParameterProvider
 import okhttp3.Response
 
 import java.io.InputStream

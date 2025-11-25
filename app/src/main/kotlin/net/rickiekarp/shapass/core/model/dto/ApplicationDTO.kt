@@ -1,4 +1,4 @@
-package net.rickiekarp.core.model.dto
+package net.rickiekarp.shapass.core.model.dto
 
 class ApplicationDTO {
     var identifier: String? = null

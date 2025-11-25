@@ -1,15 +1,15 @@
-package net.rickiekarp.core.settings
+package net.rickiekarp.shapass.core.settings
 
 import javafx.geometry.Side
 import javafx.scene.paint.Color
-import net.rickiekarp.core.AppContext
-import net.rickiekarp.core.debug.LogFileHandler
-import net.rickiekarp.core.provider.LocalizationProvider
-import net.rickiekarp.core.ui.windowmanager.ThemeSelector
-import net.rickiekarp.core.ui.windowmanager.Window
-import net.rickiekarp.core.util.CommonUtil
-import net.rickiekarp.core.util.FileUtil
-import net.rickiekarp.core.view.SettingsScene
+import net.rickiekarp.shapass.core.AppContext
+import net.rickiekarp.shapass.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.provider.LocalizationProvider
+import net.rickiekarp.shapass.core.ui.windowmanager.ThemeSelector
+import net.rickiekarp.shapass.core.ui.windowmanager.Window
+import net.rickiekarp.shapass.core.util.CommonUtil
+import net.rickiekarp.shapass.core.util.FileUtil
+import net.rickiekarp.shapass.core.view.SettingsScene
 import java.io.File
 import java.io.IOException
 import java.lang.reflect.Field

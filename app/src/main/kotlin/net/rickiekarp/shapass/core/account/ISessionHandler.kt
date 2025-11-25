@@ -1,4 +1,4 @@
-package net.rickiekarp.core.account
+package net.rickiekarp.shapass.core.account
 
 interface ISessionHandler {
     fun updateSession()

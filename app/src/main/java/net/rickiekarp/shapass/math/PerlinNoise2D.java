@@ -1,6 +1,6 @@
 package net.rickiekarp.shapass.math;
 
-import net.rickiekarp.core.math.noise.NoiseConfig;
+import net.rickiekarp.shapass.core.math.noise.NoiseConfig;
 
 import java.awt.image.BufferedImage;
 

@@ -1,8 +1,8 @@
-package net.rickiekarp.core.ui.tray
+package net.rickiekarp.shapass.core.ui.tray
 
 import javafx.application.Platform
-import net.rickiekarp.core.AppContext
-import net.rickiekarp.core.view.MainScene
+import net.rickiekarp.shapass.core.AppContext
+import net.rickiekarp.shapass.core.view.MainScene
 import java.io.IOException
 import javax.imageio.ImageIO
 import kotlin.system.exitProcess

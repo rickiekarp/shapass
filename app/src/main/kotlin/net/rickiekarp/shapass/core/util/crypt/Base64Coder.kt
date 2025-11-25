@@ -1,4 +1,4 @@
-package net.rickiekarp.core.util.crypt
+package net.rickiekarp.shapass.core.util.crypt
 
 import okhttp3.internal.and
 

@@ -1,4 +1,4 @@
-package net.rickiekarp.core.ui.windowmanager
+package net.rickiekarp.shapass.core.ui.windowmanager
 
 import javafx.stage.Stage
 

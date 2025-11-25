@@ -1,4 +1,4 @@
-package net.rickiekarp.core.ui.anim
+package net.rickiekarp.shapass.core.ui.anim
 
 import javafx.animation.Interpolator
 import javafx.animation.Transition

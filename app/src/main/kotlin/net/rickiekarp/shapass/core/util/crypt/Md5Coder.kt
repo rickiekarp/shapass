@@ -1,4 +1,4 @@
-package net.rickiekarp.core.util.crypt
+package net.rickiekarp.shapass.core.util.crypt
 
 import java.math.BigInteger
 import java.security.MessageDigest

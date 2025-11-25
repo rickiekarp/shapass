@@ -1,9 +1,9 @@
-package net.rickiekarp.core.util.crypt
+package net.rickiekarp.shapass.core.util.crypt
 
-import net.rickiekarp.core.enums.CustomCoderType
-import net.rickiekarp.core.model.CustomCoderConfig
-import net.rickiekarp.core.util.crypt.custom.CustomCoderV1
-import net.rickiekarp.core.util.crypt.custom.CustomCoderV2
+import net.rickiekarp.shapass.core.enums.CustomCoderType
+import net.rickiekarp.shapass.core.model.CustomCoderConfig
+import net.rickiekarp.shapass.core.util.crypt.custom.CustomCoderV1
+import net.rickiekarp.shapass.core.util.crypt.custom.CustomCoderV2
 
 object CustomCoder {
 

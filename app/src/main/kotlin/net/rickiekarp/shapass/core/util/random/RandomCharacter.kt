@@ -1,7 +1,7 @@
-package net.rickiekarp.core.util.random
+package net.rickiekarp.shapass.core.util.random
 
-import net.rickiekarp.core.enums.AlphabetType
-import net.rickiekarp.core.util.crypt.Md5Coder
+import net.rickiekarp.shapass.core.enums.AlphabetType
+import net.rickiekarp.shapass.core.util.crypt.Md5Coder
 import okhttp3.internal.toImmutableList
 import java.util.*
 

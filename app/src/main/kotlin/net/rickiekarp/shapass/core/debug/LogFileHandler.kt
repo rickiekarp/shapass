@@ -1,10 +1,10 @@
-package net.rickiekarp.core.debug
+package net.rickiekarp.shapass.core.debug
 
 import javafx.collections.FXCollections
-import net.rickiekarp.core.provider.LocalizationProvider
-import net.rickiekarp.core.settings.Configuration
-import net.rickiekarp.core.util.CommonUtil
-import net.rickiekarp.core.view.MessageDialog
+import net.rickiekarp.shapass.core.provider.LocalizationProvider
+import net.rickiekarp.shapass.core.settings.Configuration
+import net.rickiekarp.shapass.core.util.CommonUtil
+import net.rickiekarp.shapass.core.view.MessageDialog
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException
@@ -135,7 +135,12 @@ class LogFileHandler {
                         writeLog()
                     }
                 } else {
-                    MessageDialog(0, LocalizationProvider.getString("logFile_created_fail") + " " + LocalizationProvider.getString("no_logData_desc"), 450, 220)
+                    MessageDialog(
+                        0,
+                        LocalizationProvider.getString("logFile_created_fail") + " " + LocalizationProvider.getString("no_logData_desc"),
+                        450,
+                        220
+                    )
                 }
             }
         }

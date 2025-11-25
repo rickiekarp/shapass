@@ -1,11 +1,11 @@
-package net.rickiekarp.core.ui.windowmanager
+package net.rickiekarp.shapass.core.ui.windowmanager
 
 import javafx.scene.Scene
 import javafx.scene.layout.Region
 import javafx.scene.paint.Color
 import javafx.stage.StageStyle
-import net.rickiekarp.core.debug.DebugHelper
-import net.rickiekarp.core.settings.Configuration
+import net.rickiekarp.shapass.core.debug.DebugHelper
+import net.rickiekarp.shapass.core.settings.Configuration
 
 class WindowScene
 /**

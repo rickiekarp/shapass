@@ -1,4 +1,4 @@
-package net.rickiekarp.core.util.math
+package net.rickiekarp.shapass.core.util.math
 
 import kotlin.math.ln
 

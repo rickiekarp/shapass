@@ -1,4 +1,4 @@
-package net.rickiekarp.core.components.textfield
+package net.rickiekarp.shapass.core.components.textfield
 
 import javafx.beans.property.IntegerProperty
 import javafx.beans.property.SimpleIntegerProperty

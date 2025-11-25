@@ -1,7 +1,7 @@
-package net.rickiekarp.core.model
+package net.rickiekarp.shapass.core.model
 
-import net.rickiekarp.core.enums.AlphabetType
-import net.rickiekarp.core.enums.CustomCoderType
+import net.rickiekarp.shapass.core.enums.AlphabetType
+import net.rickiekarp.shapass.core.enums.CustomCoderType
 import net.rickiekarp.shapass.math.PerlinNoise2D
 
 class CustomCoderConfig(

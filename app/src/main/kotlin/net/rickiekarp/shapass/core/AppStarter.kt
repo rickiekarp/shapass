@@ -1,20 +1,20 @@
-package net.rickiekarp.core
+package net.rickiekarp.shapass.core
 
 import javafx.application.Application
 import javafx.application.Platform
 import javafx.event.EventHandler
 import javafx.scene.input.KeyEvent
 import javafx.stage.Stage
-import net.rickiekarp.core.debug.DebugHelper
-import net.rickiekarp.core.debug.ExceptionHandler
-import net.rickiekarp.core.provider.LocalizationProvider
-import net.rickiekarp.core.settings.Configuration
-import net.rickiekarp.core.settings.LoadSave
-import net.rickiekarp.core.ui.tray.ToolTrayIcon
-import net.rickiekarp.core.ui.windowmanager.ImageLoader
-import net.rickiekarp.core.view.MainScene
-import net.rickiekarp.core.view.MessageDialog
-import net.rickiekarp.core.view.layout.AppLayout
+import net.rickiekarp.shapass.core.debug.DebugHelper
+import net.rickiekarp.shapass.core.debug.ExceptionHandler
+import net.rickiekarp.shapass.core.provider.LocalizationProvider
+import net.rickiekarp.shapass.core.settings.Configuration
+import net.rickiekarp.shapass.core.settings.LoadSave
+import net.rickiekarp.shapass.core.ui.tray.ToolTrayIcon
+import net.rickiekarp.shapass.core.ui.windowmanager.ImageLoader
+import net.rickiekarp.shapass.core.view.MainScene
+import net.rickiekarp.shapass.core.view.MessageDialog
+import net.rickiekarp.shapass.core.view.layout.AppLayout
 
 open class AppStarter : Application() {
     private var mainClazz: Class<*>? = null

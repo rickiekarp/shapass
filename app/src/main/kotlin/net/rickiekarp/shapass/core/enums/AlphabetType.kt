@@ -1,4 +1,4 @@
-package net.rickiekarp.core.enums
+package net.rickiekarp.shapass.core.enums
 
 enum class AlphabetType(private val characterSet: String) {
     CYRILLIC("АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя"),

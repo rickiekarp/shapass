@@ -1,4 +1,4 @@
-package net.rickiekarp.core.ui.windowmanager
+package net.rickiekarp.shapass.core.ui.windowmanager
 
 import javafx.beans.property.SimpleBooleanProperty
 import javafx.beans.property.SimpleDoubleProperty
@@ -25,16 +25,16 @@ import javafx.stage.Modality
 import javafx.stage.Screen
 import javafx.stage.Stage
 import javafx.stage.StageStyle
-import net.rickiekarp.core.components.button.SidebarButton
-import net.rickiekarp.core.debug.DebugHelper
-import net.rickiekarp.core.debug.LogFileHandler
-import net.rickiekarp.core.provider.LocalizationProvider
-import net.rickiekarp.core.settings.AppCommands
-import net.rickiekarp.core.settings.Configuration
-import net.rickiekarp.core.settings.LoadSave
-import net.rickiekarp.core.ui.anim.AnimationHandler
-import net.rickiekarp.core.view.AboutScene
-import net.rickiekarp.core.view.SettingsScene
+import net.rickiekarp.shapass.core.components.button.SidebarButton
+import net.rickiekarp.shapass.core.debug.DebugHelper
+import net.rickiekarp.shapass.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.provider.LocalizationProvider
+import net.rickiekarp.shapass.core.settings.AppCommands
+import net.rickiekarp.shapass.core.settings.Configuration
+import net.rickiekarp.shapass.core.settings.LoadSave
+import net.rickiekarp.shapass.core.ui.anim.AnimationHandler
+import net.rickiekarp.shapass.core.view.AboutScene
+import net.rickiekarp.shapass.core.view.SettingsScene
 import java.util.logging.Level
 
 /**

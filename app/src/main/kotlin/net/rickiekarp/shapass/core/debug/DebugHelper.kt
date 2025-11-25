@@ -1,7 +1,7 @@
-package net.rickiekarp.core.debug
+package net.rickiekarp.shapass.core.debug
 
-import net.rickiekarp.core.AppContext
-import net.rickiekarp.core.settings.Configuration
+import net.rickiekarp.shapass.core.AppContext
+import net.rickiekarp.shapass.core.settings.Configuration
 import java.io.File
 import java.io.IOException
 import java.net.URISyntaxException

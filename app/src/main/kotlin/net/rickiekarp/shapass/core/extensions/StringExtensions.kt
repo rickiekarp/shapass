@@ -1,4 +1,4 @@
-package net.rickiekarp.core.extensions
+package net.rickiekarp.shapass.core.extensions
 
 fun String.addCharAtIndex(char: Char, index: Int) =
     StringBuilder(this)

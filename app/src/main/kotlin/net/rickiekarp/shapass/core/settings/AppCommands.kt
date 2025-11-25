@@ -1,14 +1,14 @@
-package net.rickiekarp.core.settings
+package net.rickiekarp.shapass.core.settings
 
 import javafx.collections.FXCollections
 import javafx.collections.ObservableList
-import net.rickiekarp.core.debug.DebugHelper
-import net.rickiekarp.core.debug.ExceptionHandler
-import net.rickiekarp.core.debug.LogFileHandler
-import net.rickiekarp.core.model.ConsoleCommands
-import net.rickiekarp.core.provider.LocalizationProvider
-import net.rickiekarp.core.view.CommandsScene
-import net.rickiekarp.core.view.MessageDialog
+import net.rickiekarp.shapass.core.debug.DebugHelper
+import net.rickiekarp.shapass.core.debug.ExceptionHandler
+import net.rickiekarp.shapass.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.model.ConsoleCommands
+import net.rickiekarp.shapass.core.provider.LocalizationProvider
+import net.rickiekarp.shapass.core.view.CommandsScene
+import net.rickiekarp.shapass.core.view.MessageDialog
 import java.io.IOException
 import java.lang.reflect.InvocationTargetException
 import java.net.URISyntaxException

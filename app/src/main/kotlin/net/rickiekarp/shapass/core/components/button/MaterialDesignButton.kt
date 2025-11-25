@@ -1,4 +1,4 @@
-package net.rickiekarp.core.components.button
+package net.rickiekarp.shapass.core.components.button
 
 import javafx.animation.*
 import javafx.scene.control.Button

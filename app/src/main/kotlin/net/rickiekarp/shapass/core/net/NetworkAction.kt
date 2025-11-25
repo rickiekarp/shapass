@@ -1,7 +1,7 @@
-package net.rickiekarp.core.net
+package net.rickiekarp.shapass.core.net
 
-import net.rickiekarp.core.debug.LogFileHandler
-import net.rickiekarp.core.settings.LoadSave
+import net.rickiekarp.shapass.core.debug.LogFileHandler
+import net.rickiekarp.shapass.core.settings.LoadSave
 
 class NetworkAction internal constructor(builder: Builder) {
     internal val method: String? = builder.mMethod

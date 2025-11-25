@@ -1,8 +1,8 @@
-package net.rickiekarp.core.ui.windowmanager
+package net.rickiekarp.shapass.core.ui.windowmanager
 
 import javafx.scene.Node
 import javafx.scene.control.Button
-import net.rickiekarp.core.view.MainScene
+import net.rickiekarp.shapass.core.view.MainScene
 import java.util.*
 
 class WindowStack : Stack<Node>() {

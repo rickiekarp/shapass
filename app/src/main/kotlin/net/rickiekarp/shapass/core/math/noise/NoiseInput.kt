@@ -1,4 +1,4 @@
-package net.rickiekarp.core.math.noise
+package net.rickiekarp.shapass.core.math.noise
 
 class NoiseInput(
     var x: Int,
