@@ -1,21 +1,16 @@
 package net.rickiekarp.shapass.core.net.update
 
-import com.fasterxml.jackson.core.type.TypeReference
-import com.fasterxml.jackson.databind.ObjectMapper
-import javafx.application.Platform
 import net.rickiekarp.shapass.core.AppContext
-import net.rickiekarp.shapass.core.debug.DebugHelper
-import net.rickiekarp.shapass.core.debug.ExceptionHandler
 import net.rickiekarp.shapass.core.debug.LogFileHandler
 import net.rickiekarp.shapass.core.model.dto.ApplicationDTO
 import net.rickiekarp.shapass.core.net.NetworkApi
 import net.rickiekarp.shapass.core.settings.Configuration
 import net.rickiekarp.shapass.core.util.FileUtil
+import tools.jackson.core.type.TypeReference
+import tools.jackson.databind.ObjectMapper
 import java.io.File
 import java.io.IOException
-import java.net.URI
 import java.net.URISyntaxException
-import java.net.URL
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
 import java.util.*
@@ -23,44 +18,9 @@ import java.util.*
 class UpdateChecker {
 
     /**
-     * Checks the listed server for a new java version
-     * @return Returns remote version string
-     */
-    private val remoteJavaVersion: String
-        @Deprecated("Feature was removed because the JreCurrentVersion2.txt was removed")
-        get() {
-
-            val version: String
-            var javaurl: URL? = null
-
-            LogFileHandler.logger.info("Checking for new java version...")
-
-            try {
-                javaurl = URI.create("http://java.com/applet/JreCurrentVersion2.txt").toURL();
-
-                LogFileHandler.logger.info("Connecting to: $javaurl")
-                val scanner = Scanner(javaurl.openStream())
-                version = scanner.next()
-                scanner.close()
-                LogFileHandler.logger.info("Success! Current remote java version: $version")
-
-                return version
-            } catch (e: IOException) {
-                LogFileHandler.logger.warning("Can not connect to: " + javaurl!!)
-                if (DebugHelper.DEBUG) {
-                    e.printStackTrace()
-                } else {
-                    Platform.runLater { ExceptionHandler(e) }
-                }
-                return "no_connection"
-            }
-
-        }
-
-    /**
      * Compares local and remote program versions and returns the update status ID
      * @return  Returns update status ID as an integer
-     * Status ID's are: 0 (No update), 1 (Update), 2 (No connection), 3 (Error)
+     * Status IDs are: 0 (No update), 1 (Update), 2 (No connection), 3 (Error)
      */
     fun checkProgramUpdate(): Int {
         val inputStream = AppContext.context.networkApi.runNetworkAction(NetworkApi.requestVersionInfo(Configuration.updateChannel))

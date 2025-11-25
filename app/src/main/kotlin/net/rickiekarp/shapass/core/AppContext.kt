@@ -1,7 +1,5 @@
 package net.rickiekarp.shapass.core
 
-import net.rickiekarp.shapass.core.account.AccountManager
-import net.rickiekarp.shapass.core.debug.LogFileHandler
 import net.rickiekarp.shapass.core.net.NetworkApi
 import net.rickiekarp.shapass.core.provider.LocalizationProvider
 import net.rickiekarp.shapass.core.settings.Configuration
@@ -10,9 +8,7 @@ import java.io.IOException
 import java.util.jar.JarFile
 import java.util.jar.Manifest
 
-class AppContext protected constructor(val contextIdentifier: String, val networkApi: NetworkApi) {
-    var accountManager: AccountManager
-        private set
+class AppContext private constructor(val contextIdentifier: String, val networkApi: NetworkApi) {
     var internalVersion: String? = null
 
     val applicationName: String
@@ -29,15 +25,6 @@ class AppContext protected constructor(val contextIdentifier: String, val networ
             }
 
         }
-
-    init {
-        accountManager = AccountManager()
-    }
-
-    fun initAccountManager() {
-        accountManager.account = accountManager.loadAccountFromFile()
-        LogFileHandler.logger.config("ACCOUNT=" + accountManager.account)
-    }
 
     companion object {
         lateinit var context: AppContext

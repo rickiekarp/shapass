@@ -85,13 +85,6 @@ internal class ConnectionHandler {
 
     private fun addHeaders(builder: Request.Builder) {
         builder.addHeader(HEADER_USER_AGENT, AppContext.context.contextIdentifier + "/" + AppContext.context.internalVersion)
-
-        val accountManager = AppContext.context.accountManager
-        if (accountManager.account != null) {
-            if (accountManager.account!!.accessToken != null) {
-                builder.addHeader(HEADER_AUTHORIZATION, "Basic " + accountManager.account!!.accessToken!!)
-            }
-        }
     }
 
     /**

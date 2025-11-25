@@ -8,8 +8,8 @@ buildscript {
         }
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0"
-        classpath "org.openjfx:javafx-plugin:0.0.13"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.21"
+        classpath "org.openjfx:javafx-plugin:0.1.0"
     }
 }
 
@@ -20,7 +20,7 @@ allprojects {
 
     apply plugin: "org.openjfx.javafxplugin"
     javafx {
-        version = "23.0.1"
+        version = "23.0.2"
         modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing' ]
     }
 
@@ -36,13 +36,13 @@ allprojects {
     application.mainClass.set("net.rickiekarp.shapass.Main")
 
     dependencies {
-        api "com.squareup.okhttp3:okhttp:4.12.0"
-        implementation "org.json:json:20240303"
-        implementation "commons-io:commons-io:2.15.1"
-        implementation "com.fasterxml.jackson.core:jackson-databind:2.17.0"
-        implementation group: 'net.java.dev.jna', name: 'jna', version: '5.15.0'
-        testImplementation "org.junit.jupiter:junit-jupiter-api:5.10.2"
-        testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.10.2"
+        api "com.squareup.okhttp3:okhttp:5.3.2"
+        implementation "org.json:json:20250517"
+        implementation "commons-io:commons-io:2.21.0"
+        implementation("tools.jackson.core:jackson-databind:3.0.2")
+        implementation group: 'net.java.dev.jna', name: 'jna', version: '5.18.1'
+        testImplementation "org.junit.jupiter:junit-jupiter-api:5.14.1"
+        testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.14.1"
     }
 
 //    tasks.register('fetchNativesLib', Exec) {

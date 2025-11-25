@@ -11,7 +11,7 @@ class NetworkParameterProvider private constructor() : NetworkAction.IParameterP
 
     fun put(key: String, parameter: String?): NetworkParameterProvider {
         if (parameter != null) {
-            mParameterMap[key] = parameter.toString()
+            mParameterMap[key] = parameter
         }
         return this
     }

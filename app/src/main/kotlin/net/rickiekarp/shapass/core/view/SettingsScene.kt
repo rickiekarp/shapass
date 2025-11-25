@@ -134,44 +134,43 @@ class SettingsScene {
             GridPane.setConstraints(appbox, 1, 1)
             tab1ContentGrid[1].children.add(appbox)
 
-            val btn_chkAppUpdate = Button()
-            btn_chkAppUpdate.text = LocalizationProvider.getString("chkUpdate")
+            val btnCheckAppUpdate = Button()
+            btnCheckAppUpdate.text = LocalizationProvider.getString("chkUpdate")
 
             val updateBarApp = ProgressBar(0.0)
             updateBarApp.progress = ProgressIndicator.INDETERMINATE_PROGRESS
 
             val updStatusApp = Label()
 
-            val btn_downloadAppUpdate = Button(LocalizationProvider.getString("download"))
-
-            val btn_installAppUpdate = Button(LocalizationProvider.getString("install"))
+            val btnDownloadAppUpdate = Button(LocalizationProvider.getString("download"))
+            val btnInstallAppUpdate = Button(LocalizationProvider.getString("install"))
 
             if (UpdateChecker.isUpdAvailable) {
                 updStatusApp.text = LocalizationProvider.getString("update_available")
-                appbox.children.addAll(updStatusApp, btn_downloadAppUpdate)
+                appbox.children.addAll(updStatusApp, btnDownloadAppUpdate)
                 updateChannelBox.isDisable = true
             } else {
-                appbox.children.add(btn_chkAppUpdate)
+                appbox.children.add(btnCheckAppUpdate)
             }
 
-            btn_chkAppUpdate.setOnAction { _ ->
+            btnCheckAppUpdate.setOnAction { _ ->
 
                 updateChannelBox.isDisable = true
-                appbox.children.remove(btn_chkAppUpdate)
+                appbox.children.remove(btnCheckAppUpdate)
                 appbox.children.add(updateBarApp)
 
                 Thread {
 
-                    val updatestatus = UpdateChecker().checkProgramUpdate()
+                    val updateStatus = UpdateChecker().checkProgramUpdate()
 
                     Platform.runLater {
                         appbox.children.remove(updateBarApp)
                         appbox.children.add(updStatusApp)
-                        when (updatestatus) {
+                        when (updateStatus) {
                             0 -> updStatusApp.text = LocalizationProvider.getString("no_update")
                             1 -> {
                                 updStatusApp.text = LocalizationProvider.getString("update_available")
-                                appbox.children.add(btn_downloadAppUpdate)
+                                appbox.children.add(btnDownloadAppUpdate)
                                 MainScene.mainScene.windowScene!!.win.windowStage.stage.title = AppContext.context.applicationName + " - " + LocalizationProvider.getString("update_available")
                             }
                             2 -> updStatusApp.text = LocalizationProvider.getString("no_connection")
@@ -181,8 +180,8 @@ class SettingsScene {
                 }.start()
             }
 
-            btn_downloadAppUpdate.setOnAction { _ ->
-                appbox.children.remove(btn_downloadAppUpdate)
+            btnDownloadAppUpdate.setOnAction { _ ->
+                appbox.children.remove(btnDownloadAppUpdate)
                 appbox.children.remove(updStatusApp)
                 appbox.children.add(updateBarApp)
 
@@ -217,12 +216,12 @@ class SettingsScene {
                     Platform.runLater {
                         appbox.children.remove(updateBarApp)
                         updStatusApp.text = LocalizationProvider.getString("dlComplete")
-                        appbox.children.add(btn_installAppUpdate)
+                        appbox.children.add(btnInstallAppUpdate)
                     }
                 }.start()
             }
 
-            btn_installAppUpdate.setOnAction { _ ->
+            btnInstallAppUpdate.setOnAction { _ ->
                 val stage = MessageDialog.installUpdateDialog(500, 220)
                 stage.showAndWait()
             }
