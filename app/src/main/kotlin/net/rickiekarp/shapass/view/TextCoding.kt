@@ -17,9 +17,10 @@ import net.rickiekarp.shapass.core.components.FoldableListCell
 import net.rickiekarp.shapass.core.components.textfield.CustomTextField
 import net.rickiekarp.shapass.core.debug.DebugHelper
 import net.rickiekarp.shapass.core.debug.LogFileHandler
-import net.rickiekarp.shapass.core.enums.AlphabetType
+import net.rickiekarp.shapass.core.enums.CharsetType
 import net.rickiekarp.shapass.core.enums.CustomCoderType
 import net.rickiekarp.shapass.core.enums.FontType
+import net.rickiekarp.shapass.core.model.CharsetFlags
 import net.rickiekarp.shapass.core.model.CustomCoderConfig
 import net.rickiekarp.shapass.core.model.SettingEntry
 import net.rickiekarp.shapass.core.provider.LocalizationProvider
@@ -50,11 +51,7 @@ class TextCoding(textCodingType: TextCodingType) {
     private val coderConfig = CustomCoderConfig(
         defaultCoderType,
         "",
-        mutableMapOf(
-            AlphabetType.CYRILLIC to true,
-            AlphabetType.LATIN to true,
-            AlphabetType.GREEK to true,
-        ),
+        CharsetFlags(7),
         false
     )
 
@@ -197,26 +194,32 @@ class TextCoding(textCodingType: TextCodingType) {
         val latin = CheckBox(LocalizationProvider.getString("latin"))
         latin.isSelected = true
         latin.setOnAction { _ ->
-            coderConfig.characterSetConfig[AlphabetType.LATIN] = !coderConfig.characterSetConfig[AlphabetType.LATIN]!!
-            LogFileHandler.logger.config("change_latin_option: " + !coderConfig.characterSetConfig[AlphabetType.LATIN]!! + " -> " + coderConfig.characterSetConfig[AlphabetType.LATIN])
+            setCharsetBitFlag(CharsetType.LATIN)
         }
 
         val cyrillic = CheckBox(LocalizationProvider.getString("cyrillic"))
         cyrillic.isSelected = true
         cyrillic.setOnAction { _ ->
-            coderConfig.characterSetConfig[AlphabetType.CYRILLIC] = !coderConfig.characterSetConfig[AlphabetType.CYRILLIC]!!
-            LogFileHandler.logger.config("change_cyrillic_option: " + !coderConfig.characterSetConfig[AlphabetType.CYRILLIC]!! + " -> " + coderConfig.characterSetConfig[AlphabetType.CYRILLIC])
+            setCharsetBitFlag(CharsetType.CYRILLIC)
         }
 
         val greek = CheckBox(LocalizationProvider.getString("greek"))
         greek.isSelected = true
         greek.setOnAction { _ ->
-            coderConfig.characterSetConfig[AlphabetType.GREEK] = !coderConfig.characterSetConfig[AlphabetType.GREEK]!!
-            LogFileHandler.logger.config("change_greek_option: " + !coderConfig.characterSetConfig[AlphabetType.GREEK]!! + " -> " + coderConfig.characterSetConfig[AlphabetType.GREEK])
+            setCharsetBitFlag(CharsetType.GREEK)
         }
 
         content.children.addAll(option2Desc, latin, cyrillic, greek)
         return content
+    }
+
+    private fun setCharsetBitFlag(type: CharsetType)  {
+        if (coderConfig.characterSetBitFlag.has(type)) {
+            coderConfig.characterSetBitFlag.remove(type)
+        } else {
+            coderConfig.characterSetBitFlag.add(type)
+        }
+        LogFileHandler.logger.config("change_charset_option: " + type + " = " + coderConfig.characterSetBitFlag.has(type))
     }
 
     private fun createBox3(): VBox {
