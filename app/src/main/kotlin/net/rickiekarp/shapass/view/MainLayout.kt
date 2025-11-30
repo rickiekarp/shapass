@@ -239,7 +239,7 @@ class MainLayout : AppLayout {
 
     private fun calcCustom() {
         val result = GoLibTransformer.VelesLib.CalculateHashCustom(
-            sentenceTF.text + wordTF.text,
+            sentenceTF.text,
             64,
             15,     // CYRILLIC, GREEK, LATIN, SPECIAL_CHARACTERS
             1        // COMPLEX_MODE = ON
