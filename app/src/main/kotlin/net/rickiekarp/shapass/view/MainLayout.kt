@@ -18,7 +18,6 @@ import net.rickiekarp.shapass.core.components.textfield.CustomTextFieldSkin
 import net.rickiekarp.shapass.core.debug.DebugHelper
 import net.rickiekarp.shapass.core.provider.LocalizationProvider
 import net.rickiekarp.shapass.core.util.ClipboardUtil
-import net.rickiekarp.shapass.core.util.CommonUtil
 import net.rickiekarp.shapass.core.view.AboutScene
 import net.rickiekarp.shapass.core.view.MainScene
 import net.rickiekarp.shapass.core.view.layout.AppLayout
@@ -31,9 +30,6 @@ class MainLayout : AppLayout {
 
     private lateinit var mainGrid: GridPane
     private lateinit var sentenceTF: CustomTextField
-    private lateinit var sentenceTextFieldSkin: CustomTextFieldSkin
-    private lateinit var wordTF: CustomTextField
-    private lateinit var wordTextFieldSkin: CustomTextFieldSkin
 
     private val mainLayout: Node
         get() {
@@ -76,7 +72,7 @@ class MainLayout : AppLayout {
 
             sentenceTF = CustomTextField()
             sentenceTF.tooltip = Tooltip(LocalizationProvider.getString("type_sentence_tip"))
-            sentenceTextFieldSkin = CustomTextFieldSkin(sentenceTF)
+            val sentenceTextFieldSkin = CustomTextFieldSkin(sentenceTF)
             sentenceTextFieldSkin.shouldMask = true
             sentenceTF.skin = sentenceTextFieldSkin
             GridPane.setConstraints(sentenceTF, 1, 0)
@@ -103,17 +99,6 @@ class MainLayout : AppLayout {
             complexMode.isSelected = isComplex
             GridPane.setConstraints(complexMode, 2, 1)
             mainGrid.children.add(complexMode)
-
-            wordTF = CustomTextField()
-            wordTextFieldSkin = CustomTextFieldSkin(wordTF)
-            wordTextFieldSkin.shouldMask = false
-            wordTF.skin = wordTextFieldSkin
-            wordTF.text = CommonUtil.getDate("yyyy")
-            wordTF.style = "-fx-font-size: 10pt;"
-            wordTF.tooltip = Tooltip(LocalizationProvider.getString("pass_word_tip"))
-            GridPane.setConstraints(wordTF, 4, 1)
-            wordTF.prefWidth = 30.0
-            mainGrid.children.add(wordTF)
 
             val sha256Btn = Button(LocalizationProvider.getString("sha256_label"))
             sha256Btn.style = "-fx-font-size: 10pt;"
@@ -218,9 +203,10 @@ class MainLayout : AppLayout {
     }
 
     private fun calcSha256() {
-        val input = sentenceTF.text + wordTF.text
+        val input = sentenceTF.text
         val result: String = if (isHmac) {
-            GoLibTransformer.VelesLib.CalculateHashSha3256HMAC(input, wordTF.text)
+            val secret = GoLibTransformer.VelesLib.CalculateHashMD5(sentenceTF.text)
+            GoLibTransformer.VelesLib.CalculateHashSha3256HMAC(input, secret)
         } else {
             GoLibTransformer.VelesLib.CalculateHashSha3256(input)
         }
@@ -228,9 +214,10 @@ class MainLayout : AppLayout {
     }
 
     private fun calcSha512() {
-        val input = sentenceTF.text + wordTF.text
+        val input = sentenceTF.text
         val result: String = if (isHmac) {
-            GoLibTransformer.VelesLib.CalculateHashSha3512HMAC(input, wordTF.text)
+            val secret = GoLibTransformer.VelesLib.CalculateHashMD5(sentenceTF.text)
+            GoLibTransformer.VelesLib.CalculateHashSha3512HMAC(input, secret)
         } else {
             GoLibTransformer.VelesLib.CalculateHashSha3512(input)
         }
@@ -249,10 +236,6 @@ class MainLayout : AppLayout {
 
     private fun copyToClipboard(data: String) {
         ClipboardUtil.setStringToClipboard(data)
-    }
-
-    private fun isEven(num : Int) : Boolean {
-       return num % 2 == 0
     }
 
     override val layout: Node
