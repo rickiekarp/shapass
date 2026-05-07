@@ -29,7 +29,7 @@ internal class ConnectionHandler {
 
     fun requestInputStream(networkAction: NetworkAction): InputStream? {
         val response = request(networkAction) ?: return null
-        return response.body!!.byteStream()
+        return response.body.byteStream()
     }
 
     fun request(networkAction: NetworkAction): Response? {
