@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 import java.text.SimpleDateFormat
 
 buildscript {
@@ -8,7 +10,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.3.21"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.4.0"
         classpath "org.openjfx:javafx-plugin:0.1.0"
     }
 }
@@ -20,7 +22,7 @@ allprojects {
 
     apply plugin: "org.openjfx.javafxplugin"
     javafx {
-        version = "23.0.2"
+        version = "26.0.1"
         modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing' ]
     }
 
@@ -29,20 +31,27 @@ allprojects {
     }
 
     java {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(25)
+        }
+    }
+
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_25)
+        }
     }
 
     application.mainClass.set("net.rickiekarp.shapass.Main")
 
     dependencies {
-        api "com.squareup.okhttp3:okhttp:5.3.2"
-        implementation "org.json:json:20251224"
-        implementation "commons-io:commons-io:2.21.0"
-        implementation("tools.jackson.core:jackson-databind:3.1.3")
-        implementation "net.java.dev.jna:jna:5.18.1"
-        testImplementation "org.junit.jupiter:junit-jupiter-api:5.14.1"
-        testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.14.1"
+        api "com.squareup.okhttp3:okhttp:5.4.0"
+        implementation "org.json:json:20260522"
+        implementation "commons-io:commons-io:2.22.0"
+        implementation("tools.jackson.core:jackson-databind:3.2.0")
+        implementation "net.java.dev.jna:jna:5.19.1"
+        testImplementation "org.junit.jupiter:junit-jupiter-api:6.1.0"
+        testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:6.1.0"
     }
 
 //    tasks.register('fetchNativesLib', Exec) {
@@ -86,5 +95,5 @@ allprojects {
 }
 
 wrapper {
-    gradleVersion = "8.14.5"
+    gradleVersion = "9.6.1"
 }
